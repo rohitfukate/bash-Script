@@ -1,0 +1,43 @@
+#!/bin/bash
+# create_inventory_demo.sh
+# Run this from your home or workspace folder
+
+echo "Creating Inventory Management System folder structure..."
+
+# Create directories
+mkdir -p inventory-management-system/backend/inventory/migrations
+mkdir -p inventory-management-system/frontend/pages
+mkdir -p inventory-management-system/frontend/services
+mkdir -p inventory-management-system/frontend/styles
+
+# Create backend placeholder files
+echo "# Django manage.py placeholder" > inventory-management-system/backend/manage.py
+echo -e "django\ndjangorestframework\npsycopg2-binary\ndjango-cors-headers\ndjangorestframework-simplejwt\ngunicorn" > inventory-management-system/backend/requirements.txt
+echo "# Django settings placeholder" > inventory-management-system/backend/backend/settings.py
+echo "# Django URLs placeholder" > inventory-management-system/backend/backend/urls.py
+echo "# WSGI placeholder" > inventory-management-system/backend/backend/wsgi.py
+echo "# ASGI placeholder" > inventory-management-system/backend/backend/asgi.py
+echo "# Product model placeholder" > inventory-management-system/backend/inventory/models.py
+echo "# Serializers placeholder" > inventory-management-system/backend/inventory/serializers.py
+echo "# Views placeholder" > inventory-management-system/backend/inventory/views.py
+echo "# Auth serializers placeholder" > inventory-management-system/backend/inventory/auth_serializers.py
+echo "# Auth views placeholder" > inventory-management-system/backend/inventory/auth_views.py
+echo "" > inventory-management-system/backend/inventory/migrations/__init__.py
+
+# Create frontend placeholder files
+echo "// Next.js index.js placeholder" > inventory-management-system/frontend/pages/index.js
+echo "// Next.js login.js placeholder" > inventory-management-system/frontend/pages/login.js
+echo "// Next.js _app.js placeholder" > inventory-management-system/frontend/pages/_app.js
+echo "// Axios API placeholder" > inventory-management-system/frontend/services/api.js
+echo "/* Tailwind globals placeholder */" > inventory-management-system/frontend/styles/globals.css
+echo "{ /* package.json placeholder */ }" > inventory-management-system/frontend/package.json
+echo "// Tailwind config placeholder" > inventory-management-system/frontend/tailwind.config.js
+echo "// PostCSS config placeholder" > inventory-management-system/frontend/postcss.config.js
+
+# Root files
+echo "# Inventory Management System README placeholder" > inventory-management-system/README.md
+echo -e "node_modules/\n*.env\n__pycache__/\n*.pyc" > inventory-management-system/.gitignore
+
+echo "Folder structure and placeholder files created!"
+echo "You can now zip it with:"
+echo "zip -r inventory-management-system.zip inventory-management-system/"
